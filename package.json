@@ -28,6 +28,7 @@
     "build:server": "NODE_ENV=production babel server -d dist --presets react-app",
     "serve": "node dist/server.js",
     "now-start": "node dist/server.js",
+    "now-build": "yarn run build && yarn run build:server",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
