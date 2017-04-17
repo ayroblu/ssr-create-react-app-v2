@@ -1,15 +1,15 @@
-import path from 'path'
-import fs from 'fs'
+const path = require('path')
+const fs = require('fs')
 
-import React from 'react'
-import {Provider} from 'react-redux'
-import {renderToString} from 'react-dom/server'
-import {StaticRouter} from 'react-router-dom'
+const React = require('react')
+const {Provider} = require('react-redux')
+const {renderToString} = require('react-dom/server')
+const {StaticRouter} = require('react-router-dom')
 
-import configureStore from '../src/store'
-import App from '../src/containers/App'
+const {default: configureStore} = require('../src/store')
+const {default: App} = require('../src/containers/App')
 
-export default function universalLoader(req, res) {
+module.exports = function universalLoader(req, res) {
   const filePath = path.resolve(__dirname, '..', 'build', 'index.html')
 
   fs.readFile(filePath, 'utf8', (err, htmlData)=>{

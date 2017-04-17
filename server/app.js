@@ -1,15 +1,18 @@
-import 'ignore-styles'
-import bodyParser from 'body-parser'
-import compression from 'compression'
-import express from 'express'
-import morgan from 'morgan'
-import path from 'path'
-import fs from 'fs'
+require('ignore-styles')
+const bodyParser = require('body-parser')
+const compression = require('compression')
+const express = require('express')
+const morgan = require('morgan')
+const path = require('path')
+const fs = require('fs')
+
+require('babel-register')({ ignore: /\/(build|node_modules)\//, presets: ['react-app'] })
 
 // routes
-import index from './routes/index'
-import api from './routes/api'
-import universalLoader from './universal'
+const index = require('./routes/index')
+const api = require('./routes/api')
+const universalLoader = require('./universal')
+
 
 const app = express()
 
@@ -33,4 +36,4 @@ app.use('/api', api)
 // Always return the main index.html, so react-router render the route in the client
 app.use('/', universalLoader)
 
-export default app
+module.exports = app
