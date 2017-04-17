@@ -6,13 +6,13 @@ This is the v2 version of my react app, checkout my article here:
 Install
 -------
 ```bash
-npm install
-npm run build && npm run start:server
+yarn
+yarn run build && yarn run build:server && yarn run serve
 ```
 
 ### Development
 This just runs create react app, its great!
 ```bash
-npm start
+yarn start
 ```
 
