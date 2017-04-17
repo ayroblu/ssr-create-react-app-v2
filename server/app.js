@@ -1,12 +1,11 @@
-require('ignore-styles')
-require('babel-register')({ ignore: /\/(build|node_modules)\//, presets: ['react-app'] })
+import 'ignore-styles'
 
-const bodyParser = require('body-parser')
-const compression = require('compression')
-const express = require('express')
-const morgan = require('morgan')
-const path = require('path')
-const fs = require('fs')
+import bodyParser from 'body-parser'
+import compression from 'compression'
+import express from 'express'
+import morgan from 'morgan'
+import path from 'path'
+import fs from 'fs'
 
 const app = express()
 
@@ -33,4 +32,4 @@ app.use('/api', api)
 const universalLoader = require('./universal')
 app.use('/', universalLoader)
 
-module.exports = app
+export default app
