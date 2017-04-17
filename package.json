@@ -27,6 +27,7 @@
     "start:server": "NODE_ENV=development nodemon --ignore '.*.swp' server/index.js --exec babel-node --presets react-app",
     "build:server": "NODE_ENV=production babel server -d dist --presets react-app",
     "serve": "node dist/server.js",
+    "now-start": "node dist/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
