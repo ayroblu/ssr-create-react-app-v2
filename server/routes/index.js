@@ -1,10 +1,8 @@
-const express = require('express')
+import express from 'express'
 const router = express.Router()
 
-const universalLoader = require('../universal')
+import universalLoader from '../universal'
 
 router.get('/', universalLoader)
 
-module.exports = router
-
-
+export default router

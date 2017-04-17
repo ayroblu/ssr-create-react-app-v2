@@ -9,7 +9,7 @@ import {StaticRouter} from 'react-router-dom'
 import configureStore from '../src/store'
 import App from '../src/containers/App'
 
-module.exports = function universalLoader(req, res) {
+export default function universalLoader(req, res) {
   const filePath = path.resolve(__dirname, '..', 'build', 'index.html')
 
   fs.readFile(filePath, 'utf8', (err, htmlData)=>{
