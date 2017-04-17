@@ -10,9 +10,7 @@ class SecondPage extends Component {
   render() {
     return (
       <div className='bold'>
-        <p>
-          Second Page
-        </p>
+        <h2>Second Page</h2>
         <Link to={'/'}>First</Link>
       </div>
     )

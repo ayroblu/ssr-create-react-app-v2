@@ -11,9 +11,7 @@ class FirstPage extends Component {
     const b64 = this.props.staticContext ? 'wait for it' : window.btoa('wait for it')
     return (
       <div className='bold'>
-        <p>
-          First Page
-        </p>
+        <h2>First Page</h2>
         <p>{`Email: ${this.props.user.email}`}</p>
         <p>{`b64: ${b64}`}</p>
         <Link to={'/second'}>Second</Link>
