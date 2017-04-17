@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "react-scripts": "0.8.5"
   },
   "dependencies": {
@@ -12,7 +13,6 @@
     "ignore-styles": "^5.0.1",
     "import-export": "^1.0.1",
     "lodash": "^4.17.4",
-    "material-ui": "^0.16.7",
     "moment": "^2.18.1",
     "morgan": "^1.8.1",
     "node-fetch": "^1.6.3",
@@ -20,14 +20,13 @@
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
-    "react-sidebar": "^2.3.1",
-    "react-tap-event-plugin": "^2.0.1",
-    "redux": "^3.6.0",
-    "redux-logger": "^2.10.2"
+    "redux": "^3.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "start:server": "NODE_ENV=development nodemon server",
+    "start:server": "NODE_ENV=development nodemon --ignore '.*.swp' server/server.js --exec babel-node --presets react-app",
+    "build:server": "NODE_ENV=production babel server -d dist --presets react-app",
+    "serve:server": "node dist/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
