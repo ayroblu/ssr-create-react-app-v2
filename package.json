@@ -1,0 +1,35 @@
+{
+  "name": "ssr-create-react-app-v2",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.8.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
+    "express": "^4.15.2",
+    "ignore-styles": "^5.0.1",
+    "import-export": "^1.0.1",
+    "lodash": "^4.17.4",
+    "material-ui": "^0.16.7",
+    "moment": "^2.18.1",
+    "morgan": "^1.8.1",
+    "node-fetch": "^1.6.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.1.1",
+    "react-sidebar": "^2.3.1",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.10.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:server": "NODE_ENV=development nodemon server",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
