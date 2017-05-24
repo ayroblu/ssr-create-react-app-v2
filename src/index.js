@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import configureStore from './store'
 import './index.css'
 import App from './containers/App'
+import registerServiceWorker from './registerServiceWorker'
 
 // Let the reducers handle initial state
 const initialState = {}
@@ -19,5 +20,4 @@ ReactDOM.render(
   </Provider>
 , document.getElementById('root')
 )
-
-
+registerServiceWorker()
