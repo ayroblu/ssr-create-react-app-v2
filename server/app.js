@@ -6,7 +6,10 @@ const morgan = require('morgan')
 const path = require('path')
 const fs = require('fs')
 
-require('babel-register')({ ignore: /\/(build|node_modules)\//, presets: ['react-app'] })
+require('babel-register')({
+  ignore: /\/(build|node_modules)\//,
+  presets: ['env', 'react-app']
+})
 
 // routes
 const index = require('./routes/index')
@@ -19,7 +22,7 @@ const app = express()
 // Support Gzip
 app.use(compression())
 
-// Suport post requests with body data (doesn't support multipart, use multer)
+// Support post requests with body data (doesn't support multipart, use multer)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
